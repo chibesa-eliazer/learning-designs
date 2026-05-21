@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARCHI-AID - Learning Hub</title>
+    <style>
+        /* Core Styling & Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.75)), url("images/archi-aid.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: #f5f5f5;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Elegant Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(20, 20, 20, 0.85);
+            backdrop-filter: blur(10px);
+            padding: 15px 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-brand {
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: #b5b5b5;
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: #d1d1d1;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(255,255,255,0.3);
+        }
+
+        /* Typography & Section Titles */
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            text-align: center;
+            margin: 60px 0 15px;
+        }
+
+        h1 strong {
+            font-weight: 700;
+            color: #ffffff;
+            border-bottom: 2px solid #ffffff;
+            padding-bottom: 5px;
+        }
+
+        .intro-text {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            padding: 0 20px;
+            color: #ccc;
+            font-size: 16px;
+        }
+
+        .section-divider {
+            text-align: center;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin: 50px auto 30px;
+            color: #ffffff;
+            font-weight: 400;
+            position: relative;
+            max-width: 400px;
+        }
+
+        .section-divider::before, .section-divider::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 50px;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.3);
+        }
+        .section-divider::before { left: 0; }
+        .section-divider::after { right: 0; }
+
+        /* Lessons Responsive Grid Layout */
+        .grid-container {
+            max-width: 1200px;
+            margin: 0 auto 40px;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        /* Lesson Display Cards */
+        .lesson-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+
+        .lesson-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .image-wrapper {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .lesson-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .lesson-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-content h3 {
+            font-size: 15px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            color: #ffffff;
+        }
+
+        .card-content p {
+            font-size: 14px;
+            color: #b5b5b5;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-brand">ARCHI-AID</div>
+        <div class="nav-container">
+            <img src="logo/logo.png" alt="Logo" height="40px">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="learning.html">Learning</a></li>
+                <li><a href="About.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <h1>Learning <strong>Hub</strong></h1>
+    <p class="intro-text">Welcome to ARCHI-AID Learning Hub — A space where ideas, knowledge, and creativity come together. Here, we break down core architectural concepts and real-world designs into accessible lessons.</p>
+ 
+    <div class="section-divider">Design Case Studies</div>
+    <div class="grid-container">
+        
+        <div class="lesson-card">
+            <div class="image-wrapper"><img src="images/Residential project (1).png" alt="Residential project - Modern House"></div>
+            <div class="card-content">
+                <h3>Case Study: Modern Residential Architecture</h3>
+                <p>Analyzing functional layouts, form studies, and residential space planning using clean geometry.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="section-divider">Core Principles</div>
+    <div class="grid-container">
+        
+        <div class="lesson-card">
+            <div class="image-wrapper"><img src="images/1.jpeg" alt="Architectural Concept 1"></div>
+            <div class="card-content">
+                <h3>01. Primary Form & Massing</h3>
+                <p>Understanding subtractive form, solid geometry, and utilizing cutouts in 3D volumes to achieve built-in environmental shading.</p>
+            </div>
+        </div>
+
+        <div class="lesson-card">
+            <div class="image-wrapper"><img src="images/2.jpeg" alt="Architectural Concept 2"></div>
+            <div class="card-content">
+                <h3>02. Interlocking Spatial Relationships</h3>
+                <p>How overlapping concrete terraces wrap around landscaping to integrate internal functions smoothly with nature.</p>
+            </div>
+        </div>
+
+        <div class="lesson-card">
+            <div class="image-wrapper"><img src="images/3.jpeg" alt="Architectural Concept 3"></div>
+            <div class="card-content">
+                <h3>03. Horizontal Planar Elements</h3>
+                <p>Utilizing sweeping roof planes to define boundaries and columns to emphasize open, light visual horizons.</p>
+            </div>
+        </div>
+
+        <div class="lesson-card">
+            <div class="image-wrapper"><img src="images/4.jpeg" alt="Architectural Concept 4"></div>
+            <div class="card-content">
+                <h3>04. Material Contrast & Texture</h3>
+                <p>Juxtaposing rugged stone facades against warm timber paneling to create functional zones without physical barriers.</p>
+            </div>
+        </div>
+
+        <div class="lesson-card">
+            <div class="image-wrapper"><img src="images/5.jpeg" alt="Architectural Concept 5"></div>
+            <div class="card-content">
+                <h3>05. Rhythm, Pattern, and Repetition</h3>
+                <p>Using repeating sequences of structural slats along walls and ceilings to establish dynamic spatial movement.</p>
+            </div>
+        </div>
+
+        <div class="lesson-card">
+            <div class="image-wrapper"><img src="images/6.jpeg" alt="Architectural Concept 6"></div>
+            <div class="card-content">
+                <h3>06. Axis & Linear Spatial Paths</h3>
+                <p>Organizing linear column rows along an invisible centerline to frame paths and intuitively guide human circulation.</p>
+            </div>
+        </div>
+
+        <div class="lesson-card">
+            <div class="image-wrapper"><img src="images/7.jpeg" alt="Architectural Concept 7"></div>
+            <div class="card-content">
+                <h3>07. Monolithic Brutalism & Geometry</h3>
+                <p>Turning functional features like staircases into sculptures by celebrating the raw, uncovered strength of concrete.</p>
+            </div>
+        </div>
+
+        <div class="lesson-card">
+            <div class="image-wrapper"><img src="images/8.jpeg" alt="Architectural Concept 8"></div>
+            <div class="card-content">
+                <h3>08. The Integration of Green Architecture</h3>
+                <p>Applying biophilic architecture principles by integrating deep plant beds into structures for climate balance and natural cooling.</p>
+            </div>
+        </div>
+
+        <div class="lesson-card">
+            <div class="image-wrapper"><img src="images/9.jpeg" alt="Architectural Concept 9"></div>
+            <div class="card-content">
+                <h3>09. Spatial Enclosure & Transparency</h3>
+                <p>Balancing solid protective floor-roof frameworks with vast transparent glass elements to open up interior volumes.</p>
+            </div>
+        </div>
+
+        <div class="lesson-card">
+            <div class="image-wrapper"><img src="images/10.jpeg" alt="Architectural Concept 10"></div>
+            <div class="card-content">
+                <h3>10. Cantilever & Structural Defiance</h3>
+                <p>Engineering extended volumes hanging over open spaces without support pillars to form sheltered outdoor patios underneath.</p>
+            </div>
+        </div>
+
+        <div class="lesson-card">
+            <div class="image-wrapper"><img src="images/11.jpeg" alt="Architectural Concept 11"></div>
+            <div class="card-content">
+                <h3>11. Spatial Enclosure & Volumetric Intersect</h3>
+                <p>Creating geometric, multi-level framing cutouts beneath overhead skylights to channel illumination deep into lower levels.</p>
+            </div>
+        </div>
+
+        <div class="lesson-card">
+            <div class="image-wrapper"><img src="images/12.jpeg" alt="Architectural Concept 12"></div>
+            <div class="card-content">
+                <h3>12. Linear Rhythms & Structural Enclosures</h3>
+                <p>Arranging sequences of columns and overhead framing rafters to visually enclose transition walkways without using solid walls.</p>
+            </div>
+        </div>
+
+        <div class="lesson-card">
+            <div class="image-wrapper"><img src="images/13.jpeg" alt="Architectural Concept 13"></div>
+            <div class="card-content">
+                <h3>13. Planar Intersections & Asymmetric Massing</h3>
+                <p>Weaving flat, overlapping planes together dynamically to move away from rigid boundaries into sculptural layouts.</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
