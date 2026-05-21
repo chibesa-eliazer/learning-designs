@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARCHI-AID - Home</title>
+    <style>
+        /* Core Styling & Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.75)), url("images/archi-aid.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: #f5f5f5;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Elegant Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(20, 20, 20, 0.85);
+            backdrop-filter: blur(10px);
+            padding: 15px 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-brand {
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: #b5b5b5;
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: #d1d1d1;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(255,255,255,0.3);
+        }
+
+        /* Typography & Headers */
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            text-align: center;
+            margin: 60px 0 30px;
+        }
+
+        h1 strong {
+            font-weight: 700;
+            color: #ffffff;
+            border-bottom: 2px solid #ffffff;
+            padding-bottom: 5px;
+        }
+
+        /* Glassmorphism Content Cards */
+        .content-card {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+        }
+
+        .content-card p {
+            margin-bottom: 25px;
+            color: #e0e0e0;
+            font-size: 17px;
+        }
+
+        /* Modern Call-To-Action Button */
+        .cta-btn {
+            display: inline-block;
+            background: transparent;
+            color: #ffffff;
+            border: 2px solid #ffffff;
+            padding: 12px 35px;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.4s ease;
+            margin-top: 15px;
+        }
+
+        .cta-btn:hover {
+            background-color: #ffffff;
+            color: #111111;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+   <nav>
+       <div class="nav-brand">Exploring Architectural Designs And Innovations</div>
+       <div class="nav-container">
+           <img src="logo/logo.png" alt="ARCHI-AID Logo" height="40px">
+           <ul class="nav-links">
+               <li><a href="index.html">Home</a></li>
+               <li><a href="learning.html">Learning</a></li>
+               <li><a href="About.html">About</a></li>
+               <li><a href="Contact.html">Contact</a></li>
+           </ul>
+       </div>
+   </nav>
+    
+   <h1>Welcome To <strong>ARCHI-AID</strong></h1>
+   
+   <div class="content-card">
+       <p>Archi Aid is a platform that explores architectural designs, concepts, and creativity. It presents ideas in a simple and visually engaging way to inspire learning and innovations.</p>
+       <p>This website aims at showcasing architectural work while also providing educational content that helps users understand design principles, form, and structure. Explore the portfolio to view design projects, visit learning to understand key concepts, and discover how architecture shapes the world around us.</p>
+       
+       <a href="portfolio.html" class="cta-btn">Explore Designs</a>
+   </div>
+</body>
+</html>
